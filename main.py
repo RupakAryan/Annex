@@ -47,7 +47,7 @@ bot = Client(
     bot_token=BOT_TOKEN
 )
 
-AUTH_USER = os.environ.get('AUTH_USERS', '5680454765').split(',')
+AUTH_USER = os.environ.get('AUTH_USERS', '6443740402').split(',')
 AUTH_USERS = [int(user_id) for user_id in AUTH_USER]
 if int(OWNER) not in AUTH_USERS:
     AUTH_USERS.append(int(OWNER))
@@ -70,15 +70,15 @@ photozip = 'https://envs.sh/cD_.jpg'
 
 
 # Inline keyboard for start command
-BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/saini_contact_bot")]])
+BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/raj_contact_bot")]])
 keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton(text="🛠️ Help", url="https://t.me/+3k-1zcJxINYwNGZl"), InlineKeyboardButton(text="🛠️ Repo", url="https://github.com/cyberseller999/saini-txt-direct")],
+        [InlineKeyboardButton(text="🛠️ Help", url="https://t.me/+3k-1zcJxINYwNGZl"), InlineKeyboardButton(text="🛠️ Repo", url="https://github.com")],
 ])
 
 # Image URLs for the random image feature
 image_urls = [
     "https://tinypic.host/images/2025/02/07/IMG_20250207_224444_975.jpg",
-    "https://tinypic.host/images/2025/02/07/DeWatermark.ai_1738952933236-1.png",
+    "https://te.legra.ph/file/159d3f9e2d57dd02db970.jpg",
     # Add more image URLs as needed
 ]
 
@@ -498,38 +498,27 @@ async def info(bot: Client, update: Message):
 @bot.on_message(filters.command(["help"]))
 async def txt_handler(client: Client, m: Message):
     await bot.send_message(m.chat.id, text= (
-        f"💥 𝐁𝐎𝐓𝐒 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒\n\n"
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n" 
+        f"💥 𝐁𝐎𝐓𝐒 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒\n"
+        f"═════━‧₊˚❀༉‧₊˚.━═════-\n" 
         f"📌 𝗠𝗮𝗶𝗻 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀:\n\n"  
-        f"➥ /start – Bot Status Check\n"
-        f"➥ /drm – Extract from .txt (Auto)\n"
-        f"➥ /y2t – YouTube → .txt Converter\n"  
-        f"➥ /ytm – YT .txt → .mp3 downloader\n"  
-        f"➥ /yt2m – YT link → .mp3 downloader\n"  
-        f"➥ /t2t – Text → .txt Generator\n" 
-        f"➥ /stop – Cancel Running Task\n"
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ \n" 
+        f"➥ /start – ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ ᴄʜᴇᴄᴋ\n"
+        f"➥ /drm – ᴇxᴛʀᴀᴄᴛ ꜰʀᴏᴍ .ᴛxᴛ (ᴀᴜᴛᴏ)\n"
+        f"➥ /y2t – ʏᴏᴜᴛᴜʙᴇ → .ᴛxᴛ ᴄᴏɴᴠᴇʀᴛᴇʀ\n"  
+        f"➥ /t2t – ᴛᴇxᴛ → .ᴛxᴛ ɢᴇɴᴇʀᴀᴛᴏʀ\n" 
+        f"➥ /stop – ᴄᴀɴᴄᴇʟ ʀᴜɴɴɪɴɢ ᴛᴀꜱᴋ\n"
+        f"═════━‧₊˚❀༉‧₊˚.━═════- \n" 
         f"⚙️ 𝗧𝗼𝗼𝗹𝘀 & 𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀: \n\n" 
-        f"➥ /cookies – Update YT Cookies\n" 
-        f"➥ /id – Get Chat/User ID\n"  
-        f"➥ /info – User Details\n"  
-        f"➥ /logs – View Bot Activity\n"
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
-        f"👤 𝐔𝐬𝐞𝐫 𝐀𝐮𝐭𝐡𝐞𝐧𝐭𝐢𝐜𝐚𝐭𝐢𝐨𝐧: **(OWNER)**\n\n" 
-        f"➥ /addauth xxxx – Add User ID\n" 
-        f"➥ /remauth xxxx – Remove User ID\n"  
-        f"➥ /users – Total User List\n"  
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
-        f"📁 𝐂𝐡𝐚𝐧𝐧𝐞𝐥𝐬: **(Auth Users)**\n\n" 
-        f"➥ /addchnl -100xxxx – Add\n" 
-        f"➥ /remchnl -100xxxx – Remove\n"  
-        f"➥ /channels – List - (OWNER)\n"  
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
+        f"➥ /cookies – ᴜᴘᴅᴀᴛᴇ ʏᴛ ᴄᴏᴏᴋɪᴇꜱ\n" 
+        f"➥ /id – ɢᴇᴛ ᴄʜᴀᴛ/ᴜꜱᴇʀ ɪᴅ\n"  
+        f"➥ /info – ᴜꜱᴇʀ ᴅᴇᴛᴀɪʟꜱ\n"  
+        f"➥ /logs – ᴠɪᴇᴡ ʙᴏᴛ ᴀᴄᴛɪᴠɪᴛʏ\n"
+        f"═════━‧₊˚❀༉‧₊˚.━═════-\n"
         f"💡 𝗡𝗼𝘁𝗲:\n\n"  
-        f"• Send any link for auto-extraction\n"  
-        f"• Supports batch processing\n\n"  
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
+        f"• ꜱᴇɴᴅ ᴀɴʏ ʟɪɴᴋ ꜰᴏʀ ᴀᴜᴛᴏ-ᴇxᴛʀᴀᴄᴛɪᴏɴ\n"  
+        f"• ꜱᴜᴘᴘᴏʀᴛꜱ ʙᴀᴛᴄʜ ᴘʀᴏᴄᴇꜱꜱɪɴɢ\n\n"  
+        f"╭────────⊰◆⊱────────╮\n"   
         f" ➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : {CREDIT} 💻\n"
+        f"╰────────⊰◆⊱────────╯\n"
         )
     )                    
           
